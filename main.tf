@@ -13,6 +13,6 @@ module s3_bucket {
   source   = "terraform-aws-modules/s3-bucket/aws"
   for_each = var.env_type
 
-  bucket = "terraform-webinar-foreach-${each.key}"
+  bucket = "terraform-foreach-${each.key}"
   region = var.aws_region
 }
