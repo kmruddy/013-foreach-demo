@@ -2,6 +2,8 @@ provider "aws" {
   region = var.aws_region
 }
 
+variable "aws_region" {}
+
 variable env_type {
   type    = set(string)
   default = ["dev", "qa", "prod"]
