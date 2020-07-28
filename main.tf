@@ -1,3 +1,18 @@
+terraform {
+  required_version = "~> 0.13.0"
+  backend "remote" {
+    organization = "TFTMM"
+    workspaces { name = "foreach-demo" }
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "2.70.0"
+    }
+  }
+}
+
 provider "aws" {
   region = var.aws_region
 }
